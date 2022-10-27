@@ -27,3 +27,4 @@ cmd/version/generated_version.go
 
 ## local configuration
 config.yaml
+pkg/generated/*
