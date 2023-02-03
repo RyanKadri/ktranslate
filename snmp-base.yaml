@@ -1,0 +1,212 @@
+devices:
+  npmlab-fw-1.us__10.19.229.4:
+    device_name: npmlab-fw-1.us
+    device_ip: 10.19.229.4
+    snmp_comm: npm-lab
+    use_snmp_v1: false
+    debug: false
+    port: 161
+    oid: .1.3.6.1.4.1.2636.1.1.1.2.136
+    description: 'Juniper Networks, Inc. srx345 internet router, kernel JUNOS 19.4R3-S1.3,
+      Build date: 2020-12-02 21:40:47 UTC Copyright (c) 1996-2020 Juniper Networks,
+      Inc.'
+    last_checked: 2023-02-02T22:13:39.553713295Z
+    mib_profile: juniper-srx-firewalls.yml
+    provider: kentik-firewall
+    user_tags:
+      container_service: snmp
+    discovered_mibs:
+    - BGP4-MIB
+    - HOST-RESOURCES-MIB
+    - IF-MIB
+    - JUNIPER-ALARM-MIB
+    - JUNIPER-DCU-MIB
+    - JUNIPER-MIB
+    - JUNIPER-SCU-MIB
+    - JUNIPER-USERFIREWALL-MIB
+    - OSPF-MIB
+    engine_id: 80:00:0a:4c:03:f4:a7:39:2f:54:81
+    match_attributes: {}
+    monitor_admin_shut: false
+    no_use_bulkwalkall: false
+    purge_after_num: 0
+  npmlab-rtr-1.us.nr-ops.net__10.19.229.1:
+    device_name: npmlab-rtr-1.us.nr-ops.net
+    device_ip: 10.19.229.1
+    snmp_comm: npm-lab
+    use_snmp_v1: false
+    debug: false
+    port: 161
+    oid: .1.3.6.1.4.1.2636.1.1.1.2.97
+    description: 'Juniper Networks, Inc. mx104 internet router, kernel JUNOS 20.4R3-S5.4,
+      Build date: 2022-11-04 02:36:14 UTC Copyright (c) 1996-2022 Juniper Networks,
+      Inc.'
+    last_checked: 2023-02-02T22:14:12.592047838Z
+    mib_profile: juniper-mx-router.yml
+    provider: kentik-router
+    user_tags:
+      container_service: snmp
+    discovered_mibs:
+    - BGP4-MIB
+    - HOST-RESOURCES-MIB
+    - IF-MIB
+    - JUNIPER-ALARM-MIB
+    - JUNIPER-FIREWALL-MIB
+    - JUNIPER-MIB
+    - JUNIPER-VIRTUALCHASSIS-MIB
+    - OSPF-MIB
+    engine_id: 80:00:0a:4c:03:10:0e:7e:96:c6:0f
+    match_attributes: {}
+    monitor_admin_shut: false
+    no_use_bulkwalkall: false
+    purge_after_num: 0
+  npmlab-swi-1.us__10.19.229.5:
+    device_name: npmlab-swi-1.us
+    device_ip: 10.19.229.5
+    snmp_comm: npm-lab
+    use_snmp_v1: false
+    debug: false
+    port: 161
+    oid: .1.3.6.1.4.1.30065.1.3011.7280.1964.48.2878.6
+    description: Arista Networks EOS version 4.27.4M running on an Arista Networks
+      DCS-7280TR-48C6
+    last_checked: 2023-02-02T22:14:42.726953338Z
+    mib_profile: arista-switch.yml
+    provider: kentik-switch
+    user_tags:
+      container_service: snmp
+    discovered_mibs:
+    - ARISTA-BGP4V2-MIB
+    - ARISTA-IF-MIB
+    - ARISTA-QUEUE-MIB
+    - BGP4-MIB
+    - ENTITY-SENSOR-MIB
+    - HOST-RESOURCES-MIB
+    - IF-MIB
+    - LLDP-MIB
+    - OSPF-MIB
+    engine_id: f5:71:7f:fc:bd:67:48:83:a9:00
+    match_attributes: {}
+    monitor_admin_shut: false
+    no_use_bulkwalkall: false
+    purge_after_num: 0
+  npmlab-swi-2.us__10.19.229.6:
+    device_name: npmlab-swi-2.us
+    device_ip: 10.19.229.6
+    snmp_comm: npm-lab
+    use_snmp_v1: false
+    debug: false
+    port: 161
+    oid: .1.3.6.1.4.1.30065.1.3011.7280.1964.48.2878.6
+    description: Arista Networks EOS version 4.27.4M running on an Arista Networks
+      DCS-7280TR-48C6
+    last_checked: 2023-02-02T22:14:18.595849216Z
+    mib_profile: arista-switch.yml
+    provider: kentik-switch
+    user_tags:
+      container_service: snmp
+    discovered_mibs:
+    - ARISTA-BGP4V2-MIB
+    - ARISTA-IF-MIB
+    - ARISTA-QUEUE-MIB
+    - BGP4-MIB
+    - ENTITY-SENSOR-MIB
+    - HOST-RESOURCES-MIB
+    - IF-MIB
+    - LLDP-MIB
+    - OSPF-MIB
+    engine_id: f5:71:7f:44:4c:a8:f6:59:53:00
+    match_attributes: {}
+    monitor_admin_shut: false
+    no_use_bulkwalkall: false
+    purge_after_num: 0
+  npmlab-swi-3.us__10.19.229.7:
+    device_name: npmlab-swi-3.us
+    device_ip: 10.19.229.7
+    snmp_comm: npm-lab
+    use_snmp_v1: false
+    debug: false
+    port: 161
+    oid: .1.3.6.1.4.1.30065.1.3011.7280.1964.48.2878.6
+    description: Arista Networks EOS version 4.22.3M running on an Arista Networks
+      DCS-7280TR-48C6
+    last_checked: 2023-02-02T22:14:21.665238842Z
+    mib_profile: arista-switch.yml
+    provider: kentik-switch
+    user_tags:
+      container_service: snmp
+    discovered_mibs:
+    - ARISTA-BGP4V2-MIB
+    - ARISTA-IF-MIB
+    - ARISTA-QUEUE-MIB
+    - BGP4-MIB
+    - ENTITY-SENSOR-MIB
+    - HOST-RESOURCES-MIB
+    - IF-MIB
+    - LLDP-MIB
+    - OSPF-MIB
+    engine_id: f5:71:7f:fc:bd:67:48:72:07:00
+    match_attributes: {}
+    monitor_admin_shut: false
+    no_use_bulkwalkall: false
+    purge_after_num: 0
+trap:
+  listen: 127.0.0.1:1620
+  community: hello
+  version: ""
+  transport: ""
+  v3_config: null
+  trap_only: false
+discovery:
+  cidrs:
+  - 10.19.229.0/24
+  ignore_list: []
+  debug: false
+  ports:
+  - 161
+  default_communities:
+  - npm-lab
+  use_snmp_v1: false
+  default_v3: null
+  add_devices: true
+  add_mibs: true
+  threads: 4
+  replace_devices: true
+  check_all_ips: true
+  kentik: null
+global:
+  poll_time_sec: 62
+  drop_if_outside_poll: false
+  mib_profile_dir: /etc/ktranslate/profiles
+  mibs_db: ""
+  mibs_enabled:
+  - ARISTA-BGP4V2-MIB
+  - ARISTA-IF-MIB
+  - ARISTA-QUEUE-MIB
+  - BGP4-MIB
+  - ENTITY-SENSOR-MIB
+  - HOST-RESOURCES-MIB
+  - IF-MIB
+  - IP-MIB
+  - JUNIPER-ALARM-MIB
+  - JUNIPER-DCU-MIB
+  - JUNIPER-FIREWALL-MIB
+  - JUNIPER-MIB
+  - JUNIPER-SCU-MIB
+  - JUNIPER-USERFIREWALL-MIB
+  - JUNIPER-VIRTUALCHASSIS-MIB
+  - LLDP-MIB
+  - MAC-MIB
+  - MIB-DELL-10892
+  - MIKROTIK-MIB
+  - OSPF-MIB
+  - UCD-DISKIO-MIB
+  - UCD-SNMP-MIB
+  timeout_ms: 3000
+  retries: 0
+  global_v3: null
+  response_time: false
+  purge_devices_after_num: 0
+  user_tags: {}
+  match_attributes: {}
+  providers: {}

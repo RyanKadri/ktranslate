@@ -1,69 +1,34 @@
-fragment SnmpV3Config on KtConfigSnmpV3Configuration {
-  userName
-  authenticationProtocol
-  authenticationPassphrase
-  privacyProtocol
-  privacyPassphrase
-  contextEngineId
-  contextName
-}
-
-query FetchAgentConfiguration($agentId: String!) {
+query FetchCollectorConfiguration($agentName: String!, $accountId: Int!) {
   # @genqlient(typename: "Actor")
   actor {
-    # @genqlient(typename: "KtConfig")
-    ktConfig {
-      # @genqlient(typename: "KtAgent")
-      agent(agentId: $agentId) {
-        agentId
-        nrAccount
-        # @genqlient(typename: "KtAgentConfig")
-        config {
-          # @genqlient(typename: "GlobalConfig")
-          global {
-            pollTimeSec
-            timeoutMs
-            retries
-            mibsEnabled
-            dropIfOutsidePoll
-            mibProfileDir
-            responseTime
-          }
-          # @genqlient(typename: "TrapConfig")
-          trap {
-            listen
-            community
-            version
-            transport
-            # @genqlient(typename: "TrapSnmpV3Config")
-            v3Config {
-              ...SnmpV3Config
-            }
-          }
-          # @genqlient(typename: "DiscoveryConfig")
-          discovery {
-            cidrs
-            ports
-            defaultCommunities
-            # @genqlient(typename: "DiscoveryDefaultSnmpV3Config")
-            defaultV3 {
-              ...SnmpV3Config
-            }
-            # @genqlient(typename: "DiscoveryOtherSnmpV3Config")
-            otherV3s {
-              ...SnmpV3Config
-            }
-            useSnmpV1
-            addDevices
-            addMibs
-            replaceDevices
-            debug
-            threads
-            noDedupEngineId
-            checkAllIps
-          }
-        }
+    # @genqlient(typename: "NetworkMonitoring")
+    networkMonitoring {
+      # @genqlient(typename: "AgentConfiguration")
+      agentConfigurations(
+        filters: { accountId: $accountId, agentConfigurationName: $agentName }
+      ) {
+        accountId
+        rawConfiguration
+        revisionId
+        name
+        id
+        updatedAt
+        createdAt
       }
+    }
+  }
+}
+
+mutation PublishNewConfig(
+  $agentId: ID!
+  $rawConfiguration: NetworkMonitoringRawConfiguration!
+) {
+  networkMonitoringPublishDeviceConfigurations(
+    agentConfigurationId: $agentId
+    rawConfiguration: $rawConfiguration
+  ) {
+    errors {
+      description
     }
   }
 }

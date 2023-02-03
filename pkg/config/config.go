@@ -18,7 +18,7 @@ import (
 
 type ConfigManager interface {
 	Run(context.Context, func(*ktranslate.Config) error) // Run takes a context and a callback function to call whenever there is a new update to process
-	DeviceDiscovery(kt.DeviceMap)                        // called whenever there is a new snmp device discovery to parse.
+	DeviceDiscovery(*kt.SnmpConfig)                      // called whenever there is a new snmp device discovery to parse.
 	Close()                                              // Called on shutdown of ktrans.
 }
 

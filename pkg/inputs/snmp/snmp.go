@@ -383,6 +383,11 @@ func parseConfig(ctx context.Context, file string, log logger.ContextL) (*kt.Snm
 	if len(fullDevices) > 0 {
 		ms.Devices = fullDevices
 	}
+	processed := processRawConfig(ms)
+	return processed, nil
+}
+
+func processRawConfig(ms kt.SnmpConfig) *kt.SnmpConfig {
 
 	// If there's a global v3, map it in for any disco, trap and device settings.
 	if ms.Global != nil && ms.Global.GlobalV3 != nil {
@@ -446,7 +451,7 @@ func parseConfig(ctx context.Context, file string, log logger.ContextL) (*kt.Snm
 		device.InitUserTags(ServiceName)
 	}
 
-	return &ms, nil
+	return &ms
 }
 
 /*

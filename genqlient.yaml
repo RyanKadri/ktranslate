@@ -1,6 +1,11 @@
 # Default genqlient config; for full documentation see:
 # https://github.com/Khan/genqlient/blob/main/docs/genqlient.yaml
-schema: ../agent-management-api/schema2.graphql
+schema: ../network-kentik-configuration-api/src/main/resources/schema.graphql
 operations:
 - newrelic-queries.graphql
 generated: pkg/generated/generated.go
+bindings:
+  NetworkMonitoringRawConfiguration:
+    type: string
+  EpochMilliseconds:
+    type: uint64

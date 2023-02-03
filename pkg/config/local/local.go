@@ -67,7 +67,7 @@ func (lc *LocalConfig) Run(ctx context.Context, cb func(*ktranslate.Config) erro
 	}
 }
 
-func (lc *LocalConfig) DeviceDiscovery(devices kt.DeviceMap) {
+func (lc *LocalConfig) DeviceDiscovery(devices *kt.SnmpConfig) {
 	// NOOP
 }
 

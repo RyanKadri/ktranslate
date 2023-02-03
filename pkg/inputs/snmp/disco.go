@@ -144,7 +144,7 @@ func Discover(ctx context.Context, log logger.ContextL, pollDuration time.Durati
 
 	// Phone home if we have one of these set up.
 	if confMgr != nil && (stats.added > 0 || stats.replaced > 0) {
-		confMgr.DeviceDiscovery(conf.Devices)
+		confMgr.DeviceDiscovery(conf)
 	}
 
 	time.Sleep(2 * time.Second) // Give logs time to get sent back.
